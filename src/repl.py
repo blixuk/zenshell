@@ -16,6 +16,7 @@ class REPL:
         for count, _ in enumerate(iter(bool, True)):
             try:
                 stdout = self.cycle(input(f"[{count}] > "))
+                print(stdout)
             except KeyboardInterrupt:
                 self.handle_exit()
             except EOFError:
